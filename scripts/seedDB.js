@@ -1,21 +1,20 @@
 const mysql = require("mysql");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
-  database: ""
+  password: "root",
+  database: "jam_db"
 });
 
-connection.connect(err => {
+connection.connect(function(err) {
   err
     ? console.log(err + "+++++++++++++++//////////")
     : console.log("connection********");
 });
 
-require("./routes/html-routes")(app, connection);
+require("./routes/hmtl-routes")(app, connection);
 
 // db.Book
 //   .remove({})
