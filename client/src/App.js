@@ -4,10 +4,13 @@ import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
-import ProductList from "./components/ProductList";
+import HomePage from "./components/Homepage";
 import Details from "./components/Details";
 import Cart from "./components/Cart";
 import Default from "./components/Default";
+import Apparel from "./components/Apparel";
+import Jewelry from "./components/Jewelry";
+import HomeGarden from "./components/HomeGarden";
 
 class App extends Component {
   render() {
@@ -15,7 +18,10 @@ class App extends Component {
       <React.Fragment>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={ProductList} />
+          <Route exact path="/" component={HomePage} />
+          <Route path="/apparel" component={Apparel} />
+          <Route path="/jewelry" component={Jewelry} />
+          <Route path="/homeGarden" component={HomeGarden} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
           <Route component={Default} />

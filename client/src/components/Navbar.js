@@ -7,7 +7,7 @@ import { ButtonContainer } from "./Button";
 export default class Navbar extends Component {
   render() {
     return (
-      <Nav className="navbar navbar-expand-sm navbar-dark px-sm-5">
+      <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
         <Link to="/">
           <img src={logo} alt="JAM_Logo" className="navbar-brand" />
           {/*
@@ -17,18 +17,18 @@ export default class Navbar extends Component {
         </Link>
         <ul className="navbar-nav align-items-center">
           <li className="nav-item ml-5">
-            <Link to="/" className="nav-link">
+            <Link to="/apparel" className="nav-link">
               Apparel
             </Link>
           </li>
           <li className="nav-item ml-5">
-            <Link to="/" className="nav-link">
+            <Link to="/jewelry" className="nav-link">
               Jewelry
             </Link>
           </li>
           <li className="nav-item ml-5">
-            <Link to="/" className="nav-link">
-              Home & Garden
+            <Link to="/homeGarden" className="nav-link">
+              Home / Garden
             </Link>
           </li>
         </ul>
@@ -40,19 +40,16 @@ export default class Navbar extends Component {
             My Jam!
           </ButtonContainer>
         </Link>
-      </Nav>
+      </NavWrapper>
     );
   }
 }
 
-const Nav = styled.nav`
-background: var(--mainMagento);
-.nav-link {
-  color: var(--mainWhite) !important;
-  font-size:1.3rem;
-  text-transform:capitalize;
-}
-@media (max-width: 576px) {
-  .navbar-nav {
-    flex-direction: row !important;
+const NavWrapper = styled.nav`
+  background: var(--mainMagento);
+  .nav-link {
+    color: var(--mainWhite) !important;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+  }
 `;
