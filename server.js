@@ -1,9 +1,14 @@
 const express = require("express");
-
-const mongoose = require("mongoose");
+const path = require("path");
 const routes = require("./routes");
 const app = express();
+const bodyParser = require("body-parser");
+const db = require("./models");
 const PORT = process.env.PORT || 3001;
+
+// handles post requests
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -15,12 +20,21 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
+<<<<<<< Updated upstream
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"
 );
+=======
+const syncOptions = { force: false, alter: true };
+>>>>>>> Stashed changes
 
-// Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+// Starting server, syncing models
+const PORT = process.env.PORT || 3001;
+db.sequelize.sync(syncOptions).then(function() {
+  app.listen(PORT, function() {
+    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+  });
 });
+
+module.exports = app;
