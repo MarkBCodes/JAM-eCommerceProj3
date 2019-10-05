@@ -2,7 +2,6 @@ const mysql = require("mysql");
 const db = require("../models");
 const express = require("express");
 
-// This file empties the Books collection and inserts the books below
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -10,7 +9,7 @@ const connection = mysql.createConnection({
   database: "jam_db"
 });
 
-connection.connect(err => {
+connection.connect(function(err) {
   err
     ? console.log(err + "+++++++++++++++//////////")
     : console.log("connection********");
