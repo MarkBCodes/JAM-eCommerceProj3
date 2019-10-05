@@ -20,17 +20,9 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-<<<<<<< Updated upstream
-// Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"
-);
-=======
 const syncOptions = { force: false, alter: true };
->>>>>>> Stashed changes
 
 // Starting server, syncing models
-const PORT = process.env.PORT || 3001;
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
