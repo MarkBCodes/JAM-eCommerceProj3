@@ -5,8 +5,10 @@ const mysql = require("mysql");
 module.exports = function(app, connection) {
   // if no matching route is found, default to index.html
   app.get("/", function(req, res) {
-    connection.query("");
+    connection.query("SELECT * FROM 'jam_db' .user;", function(err, data) {
+      err ? res.send(err) : res.json({ users: data });
+    });
   });
 };
 
-module.exports = router;
+//module.exports = router;

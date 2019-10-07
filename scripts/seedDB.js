@@ -1,30 +1,18 @@
 const mysql = require("mysql");
 const db = require("../models");
+const express = require("express");
 
-// This file empties the Books collection and inserts the books below
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
-  database: ""
+  password: "root",
+  database: "jam_db"
 });
 
-connection.connect(err => {
+connection.connect(function(err) {
   err
     ? console.log(err + "+++++++++++++++//////////")
     : console.log("connection********");
 });
 
-require("./routes/html-routes")(app, connection);
-
-// db.Book
-//   .remove({})
-//   .then(() => db.Book.collection.insertMany(bookSeed))
-//   .then(data => {
-//     console.log(data.result.n + " records inserted!");
-//     process.exit(0);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     process.exit(1);
-//   });
+require("./routes/api")(app, connection);
