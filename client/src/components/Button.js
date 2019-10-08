@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ButtonContainer = styled.button`
   text-transform: capitalize;
   font-size: 1.4rem;
-  background: transparent;
+  background: darkmagenta;
   border: 0.05rem solid var(--lightMagento);
   color: var(--lightLavender);
   border-radius: 0.5rem;
