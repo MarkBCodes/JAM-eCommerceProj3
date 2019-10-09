@@ -1,6 +1,6 @@
 const mysql = require("mysql");
-const db = require("../models");
-const express = require("express");
+// const db = require("../models");
+// const express = require("express");
 
 const connection = mysql.createConnection({
   host: "localhost",
