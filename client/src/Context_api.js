@@ -9,7 +9,10 @@ class InventoryProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart: []
+    cart: [],
+    cartSubtotal: 0,
+    cartTax: 0,
+    cartTotal: 0
   };
   componentDidMount() {
     this.setProducts();
@@ -54,6 +57,18 @@ class InventoryProvider extends Component {
       }
     );
   };
+  increment = id => {
+    console.log("increment method");
+  };
+  decrement = id => {
+    console.log("decrement method");
+  };
+  reomveItem = id => {
+    console.log("remove item method");
+  };
+  clearCart = id => {
+    console.log("clear cart");
+  };
 
   render() {
     return (
@@ -61,7 +76,11 @@ class InventoryProvider extends Component {
         value={{
           ...this.state,
           handleDetail: this.handleDetail,
-          addToCart: this.addToCart
+          addToCart: this.addToCart,
+          increment: this.increment,
+          decrement: this.decrement,
+          removeItem: this.removeItem,
+          clearCart: this.clearCart
         }}
       >
         {this.props.children}

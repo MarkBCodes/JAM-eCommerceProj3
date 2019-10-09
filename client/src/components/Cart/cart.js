@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import Title from "../Title";
+import CartColumns from "./CartColumns";
 
 export default class Cart extends Component {
   render() {
     return (
-      <div>
-        <h3>This is Where Cart Magic will Happen</h3>
-      </div>
+      <section>
+        <Title name="my" title="jam" />
+        <CartColumns />
+      </section>
     );
   }
 }
