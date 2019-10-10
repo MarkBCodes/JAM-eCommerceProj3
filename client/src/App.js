@@ -1,16 +1,34 @@
-import React from "react";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+//import logo from "./logo.svg";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar";
+import HomePage from "./components/Homepage";
+import Details from "./components/Details";
+import Cart from "./components/Cart";
+import Default from "./components/Default";
+import Apparel from "./components/Apparel";
+import Jewelry from "./components/Jewelry";
+import HomeGarden from "./components/HomeGarden";
 
-function App() {
-  return (
-    <div>
-      <Nav />
-      <Books />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/apparel" component={Apparel} />
+          <Route path="/jewelry" component={Jewelry} />
+          <Route path="/homeGarden" component={HomeGarden} />
+          <Route path="/details" component={Details} />
+          <Route path="/Cart" component={Cart} />
+          <Route component={Default} />
+        </Switch>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
