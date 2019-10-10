@@ -16,7 +16,7 @@ export default class Details extends Component {
             price,
             title,
             inCart
-          } = value.detailProduct;
+          } = value.productItem;
 
           return (
             <div className="container py-5">
@@ -60,6 +60,7 @@ export default class Details extends Component {
                       cart
                       disabled={inCart ? true : false}
                       onClick={() => {
+                        console.log(value);
                         value.addToCart(id);
                         value.openModal(id);
                       }}

@@ -95,7 +95,7 @@ export const productInventory = [
   }
 ];
 
-export const detailProduct = {
+export const productItem = {
   id: 1,
   title: "Classic Varsity Top",
   img: "Img/casual-fashion-woman_925x.jpg",

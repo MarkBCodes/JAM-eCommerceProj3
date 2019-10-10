@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { productInventory, detailProduct } from "./data";
+import { productInventory, productItem } from "./data";
 const InventoryContext = React.createContext();
 
 // Provider --InventoryProvider
@@ -8,7 +8,7 @@ const InventoryContext = React.createContext();
 class InventoryProvider extends Component {
   state = {
     products: [],
-    detailProduct: detailProduct,
+    productItem: productItem,
     cart: []
   };
   componentDidMount() {
@@ -33,11 +33,11 @@ class InventoryProvider extends Component {
   handleDetail = id => {
     const product = this.getItem(id);
     this.setState(() => {
-      return { detailProduct: product };
+      return { productItem: product };
     });
   };
 
-  addtocart = id => {
+  addToCart = id => {
     let tempProducts = [...this.state.products];
     const index = tempProducts.indexOf(this.getItem(id));
     const product = tempProducts[index];
