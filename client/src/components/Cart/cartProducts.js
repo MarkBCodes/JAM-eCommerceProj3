@@ -1,3 +1,6 @@
+// cart buttons are currently set to black. They can be changed to match logo
+// values can be changed to match DB. Need to Make sure img are pulled into cart currently.
+
 import React, { Component } from "react";
 export default class CartItem extends Component {
   render() {
