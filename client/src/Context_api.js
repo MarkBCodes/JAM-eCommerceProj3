@@ -8,10 +8,8 @@ const InventoryContext = React.createContext();
 class InventoryProvider extends Component {
   state = {
     products: [],
-    productItem: productItem,
     cart: [],
     productItem: productItem,
-    cart: [],
     cartSubtotal: 0,
     cartTax: 0,
     cartTotal: 0

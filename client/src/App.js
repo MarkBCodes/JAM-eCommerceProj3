@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/Homepage";
 import Details from "./components/Details";
-import Cart from "./components/Cart";
+import Cart from "./components/Cart/cart";
 import Default from "./components/Default";
 import Apparel from "./components/Apparel";
 import Jewelry from "./components/Jewelry";
@@ -32,3 +32,5 @@ class App extends Component {
 }
 
 export default App;
+
+//silly
