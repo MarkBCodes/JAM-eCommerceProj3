@@ -1,14 +1,10 @@
 const express = require("express");
-<<<<<<< Updated upstream
-//const path = require("path");
-=======
 const path = require("path");
->>>>>>> Stashed changes
 const routes = require("./routes");
 const app = express();
 const bodyParser = require("body-parser");
 const db = require("./models");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // handles post requests
 app.use(bodyParser.json());
@@ -27,10 +23,6 @@ app.use(routes);
 const syncOptions = { force: false, alter: true };
 
 // Starting server, syncing models
-<<<<<<< Updated upstream
-=======
-const PORT = process.env.PORT || 3001;
->>>>>>> Stashed changes
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);

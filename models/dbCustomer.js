@@ -1,20 +1,20 @@
 const db = require("../database/db");
 
 module.exports = db.sequelize.define("customers", {
-  ID: {
+  id: {
     type: DataTypes.INTEGER,
     primaryKey: true
   },
-  Email: {
+  email: {
     type: DataTypes.STRING
   },
-  First_name: {
+  firstName: {
     type: DataTypes.STRING
   },
-  Last_name: {
+  lastName: {
     type: DataTypes.STRING
   },
-  Contact: {
+  contact: {
     type: DataTypes.STRING
   }
 });
