@@ -1,6 +1,6 @@
 const db = require("../database/db");
 
-module.exports = db.sequelize.define("home-and-garden", {
+module.exports = db.sequelize.define("orders", {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true
