@@ -25,6 +25,7 @@
     "if-env": "^1.0.4",
     "mysql": "^2.17.1",
     "mysql2": "^1.7.0",
+    "react-paypal-express-checkout": "^1.0.5",
     "sequelize": "^5.19.3"
   }
 }
