@@ -4,7 +4,7 @@ const routes = require("./routes");
 const app = express();
 const bodyParser = require("body-parser");
 const db = require("./models");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // handles post requests
 app.use(bodyParser.json());
