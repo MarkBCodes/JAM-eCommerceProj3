@@ -3,11 +3,19 @@ import Product from "./Product";
 import Title from "./Title";
 // import { productInventory } from "../data"; NOTE: remove this line of code once done testing
 import { InventoryConsumer, InventoryProvider } from "../Context_api";
+import axios from "axios";
 
 export default class ProductList extends Component {
-  // state = {
-  //   apparel: productInventory
-  // };  Note: this is no longer needed, unless console.logging
+  state = {
+    apparel: []
+  };
+  componentDidMount() {
+    axios.get("http://localhost:3001/merch/apparel").then(res => {
+      this.setState({
+        apparel: res.data
+      });
+    });
+  }
   render() {
     return (
       <React.Fragment>
@@ -19,19 +27,16 @@ export default class ProductList extends Component {
                 The products will be listed here once we are able to call them
                 via MYSQL --code to call database needs to be tested
               </h3> */}
-              <InventoryConsumer>
-                {value => {
-                  return value.products.map(product => {
-                    return <Product key={product.id} product={product} />;
-                  });
-                }}
-                {/* {value => {
+              {this.state.apparel.map(product => {
+                return <Product key={product.id} product={product} />;
+              })}
+              }
+              {/* {value => {
                   return value.products.map(apparel => {
                     return <Apparel key={apparel.id} apparel={apparel} />;
                   }); 
                 }} */}
-                {/* NOTE: this above function is likely not going to work until the database is setup by Mark --since as of now it seems to call Mongodb from previous files! */}
-              </InventoryConsumer>
+              {/* NOTE: this above function is likely not going to work until the database is setup by Mark --since as of now it seems to call Mongodb from previous files! */}
             </div>
           </div>
         </div>
