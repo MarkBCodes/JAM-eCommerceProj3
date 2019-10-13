@@ -9,10 +9,11 @@
 }
 
 body {
-  font-family: "roboto", sans-serif !important;
-  background: var(--mainWhite) !important;
+  font-family: "Montserrat", sans-serif !important;
+  background: #eae6e1 !important;
   color: var(--mainDark) !important;
 }
+
 .text-title {
   font-family: "Montserrat", bold;
   letter-spacing: 0.3rem;
@@ -20,13 +21,22 @@ body {
 }
 .text-blue {
   color: var(--mainBlue);
+  font-family: "Playfair Display", bold;
 }
 .text-bright {
   color: var(--lightBlue);
 }
 .navbar {
+  display: flex;
   justify-content: flex-start !important;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
 }
+
+.carousel {
+  color: #000;
+}
+
 .btn-black {
   background: transparent;
   text-transform: capitalize;
@@ -43,4 +53,5 @@ body {
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--mainYellow);
+  font-family: "Playfair Display" bold;
 }
