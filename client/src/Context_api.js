@@ -9,7 +9,12 @@ class InventoryProvider extends Component {
   state = {
     products: [],
     cart: [],
+<<<<<<< HEAD
+    modalOpen: false,
+    modalProduct: productItem,
+=======
     productItem: productItem,
+>>>>>>> 6a564e7f543362b9fca9663eeee7794ffedd26c3
     cartSubtotal: 0,
     cartTax: 0,
     cartTotal: 0
@@ -162,6 +167,8 @@ class InventoryProvider extends Component {
           ...this.state,
           handleDetail: this.handleDetail,
           addToCart: this.addToCart,
+          openModal: this.addToCart,
+          closeModal: this.closeModal,
           increment: this.increment,
           decrement: this.decrement,
           removeItem: this.removeItem,
