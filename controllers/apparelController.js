@@ -3,9 +3,9 @@ const db = require("../models");
 // Defining methods for the jamController
 module.exports = {
   findAll: function(req, res) {
-    db.jam_db
-      .find(req.query)
-      .sort({ date: -1 })
+    console.log("database", db);
+    db.apparelproducts
+      .findAll({})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

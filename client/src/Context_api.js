@@ -9,12 +9,9 @@ class InventoryProvider extends Component {
   state = {
     products: [],
     cart: [],
-<<<<<<< HEAD
     modalOpen: false,
     modalProduct: productItem,
-=======
     productItem: productItem,
->>>>>>> 6a564e7f543362b9fca9663eeee7794ffedd26c3
     cartSubtotal: 0,
     cartTax: 0,
     cartTotal: 0
@@ -53,6 +50,15 @@ class InventoryProvider extends Component {
     product.count = 1;
     const price = product.price;
     product.total = price;
+    this.setState(
+      () => {
+        // appi call goes somewhere in here
+        return { products: tempProducts, cart: [...this.state.cart, product] };
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
     this.setState(() => {
       return {
         products: [...tempProducts],
