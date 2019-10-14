@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
-import HomePage from "./components/Homepage";
+import Homepage from "./components/Homepage";
 import Details from "./components/Details";
 import Cart from "./components/Cart/Cart";
 import Default from "./components/Default";
