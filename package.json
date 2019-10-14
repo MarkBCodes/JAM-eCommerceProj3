@@ -33,9 +33,9 @@
     "react-awesome-slider": "^2.0.0",
     "react-bootstrap-slider": "^2.2.2",
     "react-js-banner": "^0.2.4",
+    "react-paypal-express-checkout": "^1.0.5",
     "react-responsive-carousel": "^3.1.50",
     "revslider": "^5.4.201-8.6",
-    "react-paypal-express-checkout": "^1.0.5",
     "sequelize": "^5.19.3"
   }
 }
