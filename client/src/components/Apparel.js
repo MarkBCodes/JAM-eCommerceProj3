@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Product from "./Product";
 import Title from "./Title";
 // import { productInventory } from "../data"; NOTE: remove this line of code once done testing
-import { InventoryConsumer, InventoryProvider } from "../Context_api";
+//import { InventoryConsumer, InventoryProvider } from "../Context_api";
 import axios from "axios";
 
 export default class ProductList extends Component {
@@ -10,7 +10,7 @@ export default class ProductList extends Component {
     apparel: []
   };
   componentDidMount() {
-    axios.get("http://localhost:3001/merch/apparel").then(res => {
+    axios.get("http://localhost:3001/merch/apparelproducts").then(res => {
       this.setState({
         apparel: res.data
       });
