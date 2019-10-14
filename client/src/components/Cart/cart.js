@@ -5,7 +5,7 @@ import EmptyCart from "./EmptyCart";
 import { InventoryConsumer } from "../../Context_api";
 import CartList from "./CartList";
 import CartTotals from "./CartTotals";
-export default class Cart extends Component {
+export default class Store extends Component {
   render() {
     return (
       <section>
