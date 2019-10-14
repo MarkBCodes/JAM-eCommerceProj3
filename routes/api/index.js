@@ -1,9 +1,9 @@
 const path = require("path");
 const router = require("express").Router();
-const apiRoutes = require("");
+const merchRoutes = require("../merch");
 
 // API Routes
-router.use("/", apiRoutes);
+router.use("/merch", merchRoutes);
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
