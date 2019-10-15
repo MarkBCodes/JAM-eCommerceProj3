@@ -10,65 +10,46 @@ export default class Footer extends Component {
             <div className="row">
               {/* Column 1 */}
               <div className="col-md-3 col-sm-6">
-                <h4>Lorem ipsum</h4>
-                <ul className="list-unstyled">
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                </ul>
-              </div>
-              {/* Column 2 */}
-              <div className="col-md-3 col-sm-6">
-                <h4>Lorem ipsum</h4>
+                <h4>About Us</h4>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="#">Lorem ipsum</a>
+                    <a href="#">About Jam</a>
                   </li>
                   <li>
-                    <a href="#">Lorem ipsum</a>
+                    <a href="#">Careers</a>
                   </li>
                   <li>
-                    <a href="#">Lorem ipsum</a>
-                  </li>
-                  <li>
-                    <a href="#">Lorem ipsum</a>
+                    <a href="#">investor relations</a>
                   </li>
                 </ul>
               </div>
               {/* Column 3 */}
               <div className="col-md-3 col-sm-6">
-                <h4>Lorem ipsum</h4>
+                <h4>Customer Service</h4>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="#">Lorem ipsum</a>
+                    <a href="#">My Orders</a>
                   </li>
                   <li>
-                    <a href="#">Lorem ipsum</a>
+                    <a href="#">Track My Order</a>
                   </li>
                   <li>
-                    <a href="#">Lorem ipsum</a>
-                  </li>
-                  <li>
-                    <a href="#">Lorem ipsum</a>
+                    <a href="#">Return Policy</a>
                   </li>
                 </ul>
               </div>
               {/* Column 4 */}
               <div className="col-md-3 col-sm-6">
-                <h4>Lorem ipsum</h4>
+                <h4>Other JAM</h4>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="#">Lorem ipsum</a>
+                    <a href="#">Frequently Asked Questions</a>
                   </li>
                   <li>
-                    <a href="#">Lorem ipsum</a>
+                    <a href="#">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="#">Lorem ipsum</a>
-                  </li>
-                  <li>
-                    <a href="#">Lorem ipsum</a>
+                    <a href="#">Report a Bug</a>
                   </li>
                 </ul>
               </div>
@@ -76,7 +57,7 @@ export default class Footer extends Component {
             {/* Footer Bottom */}
             <div className="footer-bottom">
               <p className="text-xs-center">
-                &copy;{new Date().getFullYear()} City Guide App - All Rights
+                &copy;{new Date().getFullYear()} The Jam Team - All Rights
                 Reserved
               </p>
             </div>
