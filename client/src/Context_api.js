@@ -52,7 +52,7 @@ class InventoryProvider extends Component {
     product.total = price;
     this.setState(
       () => {
-        // appi call goes somewhere in here
+        // api call goes somewhere in here
         return { products: tempProducts, cart: [...this.state.cart, product] };
       },
       () => {

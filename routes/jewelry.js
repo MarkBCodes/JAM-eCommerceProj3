@@ -1,9 +1,9 @@
 const db = require("../models");
 const express = require("express");
 const router = require("express").Router();
-const apparel = require("../controllers/apparelController");
+const jewelry = require("../controllers/jewelryController");
 
-router.route("/apparelproducts").get(apparel.findAll);
+router.route("/jewelry").get(jewelry.findAll);
 
 //console.log(db);
 

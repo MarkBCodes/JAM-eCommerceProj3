@@ -1,6 +1,17 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export default class HomeGarden extends Component {
+  state = {
+    homegarden: []
+  };
+  componentDidMount() {
+    axios.get("http://localhost:3001/merch/homegardenproducts").then(res => {
+      this.setState({
+        homegarden: res.data
+      });
+    });
+  }
   render() {
     return (
       <div>
