@@ -3,7 +3,7 @@ const express = require("express");
 const router = require("express").Router();
 const apparel = require("../controllers/apparelController");
 
-router.route("/apparelproducts").get(apparel.findAll);
+router.route("/").get(apparel.findAll);
 
 //console.log(db);
 
