@@ -56,7 +56,7 @@ export default class Details extends Component {
                         Continue Shopping Apparel
                       </ButtonContainer>
                     </Link>
-                    <ButtonContainer
+                    <ButtonContainer //REFERENCE MERCH, HOMEGARDEN
                       cart
                       disabled={inCart ? true : false}
                       onClick={() => {
