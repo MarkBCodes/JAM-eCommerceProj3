@@ -10,7 +10,7 @@ export default class ProductList extends Component {
     apparel: []
   };
   componentDidMount() {
-    axios.get("http://localhost:3001/merch").then(res => {
+    axios.get("/merch").then(res => {
       this.setState({
         apparel: res.data
       });
