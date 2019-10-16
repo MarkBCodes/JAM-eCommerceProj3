@@ -6,7 +6,7 @@ const jewelryRoutes = require("../jewelry");
 
 // API Routes
 router.use("/merch", apparelRoutes);
-router.use("/homeGarden", homeGardenRoutes);
+router.use("/homegardenproducts", homeGardenRoutes);
 router.use("/jewelry", jewelryRoutes);
 
 // If no API routes are hit, send the React app

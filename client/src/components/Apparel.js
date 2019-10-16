@@ -10,7 +10,7 @@ export default class ProductList extends Component {
     apparel: []
   };
   componentDidMount() {
-    axios.get("http://localhost:3001/merch/apparelproducts").then(res => {
+    axios.get("http://localhost:3001/merch").then(res => {
       this.setState({
         apparel: res.data
       });
@@ -30,7 +30,7 @@ export default class ProductList extends Component {
               {this.state.apparel.map(product => {
                 return <Product key={product.id} product={product} />;
               })}
-              }
+
               {/* {value => {
                   return value.products.map(apparel => {
                     return <Apparel key={apparel.id} apparel={apparel} />;
