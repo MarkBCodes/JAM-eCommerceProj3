@@ -31,14 +31,23 @@ class Homepage extends Component {
           focusOnSelect={true}
           // this is the second nav
         >
-          <div>
+          <div class="container">
             <img src="/Img/smiling-woman-poses_463px.jpg" />
+            <a href="/apparel" button class="btn">
+              Shop Apparel
+            </a>
           </div>
-          <div>
+          <div class="container">
             <img src="/Img/bangle-bracelet-with-feathers_463x.jpg" />
+            <a href="/jewelry" button class="btn">
+              Shop Jewelry
+            </a>
           </div>
-          <div>
+          <div class="container">
             <img src="/Img/copper-light-in-bedroom_463x.jpg" />
+            <a href="/homeGarden" button class="btn">
+              Shop Home & Garden
+            </a>
           </div>
         </Slider>
 
