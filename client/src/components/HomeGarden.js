@@ -28,7 +28,7 @@ export default class ProductList extends Component {
               {this.state.homegarden.map(product => {
                 return <Product key={product.id} product={product} />;
               })}
-              }
+
               {/* {value => {
                   return value.products.map(apparel => {
                     return <Apparel key={apparel.id} apparel={apparel} />;
