@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import logo from "../iconfinder_jam_color_68px.png";
 import styled from "styled-components";
 import { ButtonContainer } from "./Button";
-import Facebook from "./Facebook";
 
 export default class Navbar extends Component {
   render() {
@@ -43,7 +42,6 @@ export default class Navbar extends Component {
             My Jam!
           </ButtonContainer>
         </Link>
-        <Facebook />
       </NavWrapper>
     );
   }
