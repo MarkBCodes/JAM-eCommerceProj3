@@ -3,7 +3,7 @@ const express = require("express");
 const router = require("express").Router();
 const homegarden = require("../controllers/homegardenController");
 
-router.route("/homegardenproducts").get(homegarden.findAll);
+router.route("/").get(homegarden.findAll);
 
 //console.log(db);
 

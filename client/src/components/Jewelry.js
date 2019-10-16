@@ -9,7 +9,7 @@ export default class ProductList extends Component {
     jewelry: []
   };
   componentDidMount() {
-    axios.get("http://localhost:3001/merch/jewelry").then(res => {
+    axios.get("http://localhost:3001/jewelry").then(res => {
       this.setState({
         jewelry: res.data
       });
@@ -29,7 +29,7 @@ export default class ProductList extends Component {
               {this.state.jewelry.map(product => {
                 return <Product key={product.id} product={product} />;
               })}
-              }
+
               {/* {value => {
                   return value.products.map(apparel => {
                     return <Apparel key={apparel.id} apparel={apparel} />;
