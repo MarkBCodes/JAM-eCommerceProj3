@@ -8,7 +8,7 @@ export default class ProductList extends Component {
     homegarden: []
   };
   componentDidMount() {
-    axios.get("http://localhost:3001/homegardenproducts").then(res => {
+    axios.get("/homegardenproducts").then(res => {
       this.setState({
         homegarden: res.data
       });
