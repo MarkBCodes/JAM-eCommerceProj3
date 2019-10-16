@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Facebook from "./Facebook";
 
 export default class Footer extends Component {
   render() {
@@ -51,6 +52,13 @@ export default class Footer extends Component {
                   <li>
                     <a href="#">Report a Bug</a>
                   </li>
+                </ul>
+              </div>
+              {/* Column 5 */}
+              <div className="col-md-3 col-sm-6">
+                <h4>Login</h4>
+                <ul className="list-unstyled">
+                  <Facebook />
                 </ul>
               </div>
             </div>
