@@ -1,26 +1,60 @@
 import React, { Component } from "react";
 // import ReactDOM from "react-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import styled from "styled-components";
+import Slider from "react-slick";
 
 class Homepage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      nav1: null,
+      nav2: null
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      nav1: this.slider1,
+      nav2: this.slider2
+    });
+  }
+
   render() {
     return (
-      <Carousel infiniteLoop autoPlay dynamicHeight>
-        <div className="main-carousel">
-          <img src="img/autumn-photographer-taking-picture_925x.jpg" />
-          <p className="legend">Trending in Apparel Right Now</p>
-        </div>
-        <div>
-          <img src="img/city-woman-fashion_925x@2x.jpg" />
-          <p className="legend">Trending in Jewelry, Right now!</p>
-        </div>
-        <div>
-          <img src="img/woman-in-the-city_925x.jpg" />
-          <p className="legend">Trending in Home & Garden, Right Now!</p>
-        </div>
-      </Carousel>
+      <div>
+        {/* <h2>Slider Syncing (AsNavFor)</h2>
+        <h4>First Slider</h4> */}
+        <Slider
+          asNavFor={this.state.nav1}
+          ref={slider => (this.slider2 = slider)}
+          slidesToShow={3}
+          swipeToSlide={true}
+          focusOnSelect={true}
+          // this is the second nav
+        >
+          <div>
+            <img src="/Img/smiling-woman-poses_463px.jpg" />
+          </div>
+          <div>
+            <img src="/Img/bangle-bracelet-with-feathers_463x.jpg" />
+          </div>
+          <div>
+            <img src="/Img/copper-light-in-bedroom_463x.jpg" />
+          </div>
+        </Slider>
+
+        {/* <h4>Second Slider</h4> */}
+        <Slider
+          asNavFor={this.state.nav2}
+          ref={slider => (this.slider1 = slider)}
+        >
+          <div>
+            <img src="/Img/imageslider2.jpg" />
+          </div>
+          {/* <div>
+            <img src="/Img/image slider.jpg" />
+          </div> */}
+        </Slider>
+      </div>
     );
   }
 }

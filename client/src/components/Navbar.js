@@ -9,6 +9,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
+        <NavWrapper sticky="top" />
         <Link to="/">
           <img src={logo} alt="JAM_Logo" className="navbar-brand" />
           {/*
@@ -33,6 +34,7 @@ export default class Navbar extends Component {
             </Link>
           </li>
         </ul>
+
         <Link to="/cart" className="ml-auto">
           <ButtonContainer>
             <span className="mr-2">
