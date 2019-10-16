@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 // import ReactDOM from "react-dom";
 import Slider from "react-slick";
 
@@ -33,21 +34,21 @@ class Homepage extends Component {
         >
           <div class="container">
             <img src="/Img/smiling-woman-poses_463px.jpg" />
-            <a href="/apparel" button class="btn">
+            <Link to="/apparel" button class="btn">
               Shop Apparel
-            </a>
+            </Link>
           </div>
           <div class="container">
             <img src="/Img/bangle-bracelet-with-feathers_463x.jpg" />
-            <a href="/jewelry" button class="btn">
+            <Link to="/jewelry" button class="btn">
               Shop Jewelry
-            </a>
+            </Link>
           </div>
           <div class="container">
             <img src="/Img/copper-light-in-bedroom_463x.jpg" />
-            <a href="/homeGarden" button class="btn">
+            <Link to="/homeGarden" button class="btn">
               Shop Home & Garden
-            </a>
+            </Link>
           </div>
         </Slider>
 
