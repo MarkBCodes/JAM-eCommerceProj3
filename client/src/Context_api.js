@@ -8,15 +8,16 @@ const InventoryContext = React.createContext();
 class InventoryProvider extends Component {
   state = {
     products: [],
+    productItem: productItem,
     cart: [],
     modalOpen: false,
     modalProduct: productItem,
-    productItem: productItem,
     cartSubtotal: 0,
     cartTax: 0,
     cartTotal: 0
   };
   componentDidMount() {
+    console.log(this.state);
     this.setProducts();
   }
 
@@ -50,20 +51,20 @@ class InventoryProvider extends Component {
     product.count = 1;
     const price = product.price;
     product.total = price;
-    this.setState(
-      () => {
-        // api call goes somewhere in here
-        return { products: tempProducts, cart: [...this.state.cart, product] };
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+    // this.setState(
+    //   () => {
+    //     // api call goes somewhere in here
+    //     return { products: tempProducts, cart: [...this.state.cart, product] };
+    //   },
+    //   () => {
+    //     console.log(this.state);
+    //   }
+    // );
     this.setState(() => {
       return {
         products: [...tempProducts],
         cart: [...this.state.cart, product],
-        detailProduct: { ...product }
+        productItem: { ...product }
       };
     }, this.addTotals);
   };
@@ -78,6 +79,34 @@ class InventoryProvider extends Component {
     product.count = product.count + 1;
     product.total = product.count * product.price;
 
+    this.setState(() => {
+      return {
+        cart: [...tempCart]
+      };
+    }, this.addTotals);
+  };
+
+  openModal = id => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { modalProduct: product, modalOpen: true };
+    });
+  };
+  closeModal = () => {
+    this.setState(() => {
+      return { modalOpen: false };
+    });
+  };
+
+  increment = id => {
+    let tempCart = [...this.state.cart];
+    const selectedProduct = tempCart.find(item => {
+      return item.id === id;
+    });
+    const index = tempCart.indexOf(selectedProduct);
+    const product = tempCart[index];
+    product.count = product.count + 1;
+    product.total = product.count * product.price;
     this.setState(() => {
       return {
         cart: [...tempCart]
@@ -173,7 +202,7 @@ class InventoryProvider extends Component {
           ...this.state,
           handleDetail: this.handleDetail,
           addToCart: this.addToCart,
-          openModal: this.addToCart,
+          openModal: this.openModal,
           closeModal: this.closeModal,
           increment: this.increment,
           decrement: this.decrement,

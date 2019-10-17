@@ -11,12 +11,12 @@ export default class Product extends Component {
       title,
       img,
       price,
-      size,
-      productDetails,
-      inStock,
-      inCart,
-      count,
-      total
+      // size,
+      // productDetails,
+      // inStock,
+      inCart
+      // count,
+      // total
     } = this.props.product;
     return (
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
