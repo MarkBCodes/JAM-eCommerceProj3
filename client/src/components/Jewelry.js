@@ -9,7 +9,7 @@ export default class ProductList extends Component {
     jewelry: []
   };
   componentDidMount() {
-    axios.get("http://localhost:3001/jewelry").then(res => {
+    axios.get("/jewelry").then(res => {
       this.setState({
         jewelry: res.data
       });

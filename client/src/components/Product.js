@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { InventoryConsumer } from "../Context_api";
+import { InventoryConsumer } from "../Context_api"; //NEED TO CHANGE TO REFERENCE DB
 // import propTypes from "prop-types"; <NOTE: This was for testing purposes></NOTE:>
 
 export default class Product extends Component {
