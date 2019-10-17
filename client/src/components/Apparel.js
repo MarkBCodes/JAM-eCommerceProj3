@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import Product from "./Product";
 import Title from "./Title";
+import { productInventory } from "../data";
+import styled from "styled-components";
+// import { InventoryConsumer } from "../Context_api";
 // import { productInventory } from "../data"; NOTE: remove this line of code once done testing
 //import { InventoryConsumer, InventoryProvider } from "../Context_api";
 import axios from "axios";
 
 export default class ProductList extends Component {
   state = {
-    apparel: []
+    apparel: productInventory
   };
   componentDidMount() {
     axios.get("/merch").then(res => {
@@ -19,7 +22,7 @@ export default class ProductList extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="py-5">
+        <ProductWrapper className="py-5">
           <div className="container">
             <Title name="JAM" title="Fashion" />
             <div className="row">
@@ -30,7 +33,6 @@ export default class ProductList extends Component {
               {this.state.apparel.map(product => {
                 return <Product key={product.id} product={product} />;
               })}
-
               {/* {value => {
                   return value.products.map(apparel => {
                     return <Apparel key={apparel.id} apparel={apparel} />;
@@ -39,8 +41,10 @@ export default class ProductList extends Component {
               {/* NOTE: this above function is likely not going to work until the database is setup by Mark --since as of now it seems to call Mongodb from previous files! */}
             </div>
           </div>
-        </div>
+        </ProductWrapper>
       </React.Fragment>
     );
   }
 }
+
+const ProductWrapper = styled.section``;
